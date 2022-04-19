@@ -1,6 +1,7 @@
 import { Component } from 'react'
-import { View, Button, Text } from '@tarojs/components'
-import { observer, inject } from 'mobx-react'
+import { View } from '@tarojs/components'
+import { observer, inject } from 'mobx-react' 
+import Layout from "../Components/Layout/Layout"
 
 import './index.scss'
 
@@ -51,10 +52,8 @@ class Index extends Component {
     const { counterStore: { counter } } = this.props.store
     return (
       <View className='index'>
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
-        <Button onClick={this.incrementAsync}>Add Async</Button>
-        <Text>{counter}</Text>
+        <Layout/>
+        
       </View>
     )
   }
